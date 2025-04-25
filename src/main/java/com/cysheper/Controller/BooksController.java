@@ -18,42 +18,22 @@ public class BooksController {
 
     @RequestMapping("/get")
     public Result getAllInfo() {
-        Result result = studentService.getAllBooks();
-        if (result.getCode().equals("200")) {
-            return result;
-        } else {
-            return result;
-        }
+        return studentService.getAllBooks();
     }
 
     @RequestMapping("/get/{id}")
     public Result getInfo(@PathVariable("id") Integer book_id) {
-        Result result = studentService.getBookById(book_id);
-        if (result.getCode().equals("200")) {
-            return result;
-        } else {
-            return result;
-        }
+        return studentService.getBookById(book_id);
     }
 
     @RequestMapping("/add")
     public Result addInfo(@RequestBody Book book) {
-        Result result = studentService.addBook(book);
-        if (result.getCode().equals("200")) {
-            return result;
-        } else {
-            return result;
-        }
+        return studentService.addBook(book);
     }
 
     @RequestMapping("/delete/{id}")
     public Result deleteInfo(@PathVariable("id") Integer book_id) {
-        Result result = studentService.deleteBook(book_id);
-        if (result.getCode().equals("200")) {
-            return result;
-        } else {
-            return result;
-        }
+        return studentService.deleteBook(book_id);
     }
 
     @RequestMapping("/getReader/{id}")
@@ -63,12 +43,7 @@ public class BooksController {
 
     @RequestMapping("/postReader")
     public Result postReaderInfo(@RequestBody Reader reader) {
-        Result result = studentService.postReader(reader);
-        if (result.getCode().equals("200")) {
-            return result;
-        } else {
-            return result;
-        }
+        return studentService.postReader(reader);
     }
 
 }
